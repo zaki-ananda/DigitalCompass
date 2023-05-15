@@ -6,11 +6,11 @@ delay1s:
 .equ Rloop, Rtemp1
 
   LDI Rloop, 80
-  delay1s_loop: 
+  delay1s_loop:         ;1 second loop delay
     LDI Rcontrol, 61
     OUT TCNT0, Rcontrol ;initialize timer0 with count=0
 
-    LDI Rcontrol, 0b00000101
+    LDI Rcontrol, 0b00000101 
     OUT TCCR0B, Rcontrol
 
     CALL delay_waitTOV
@@ -27,7 +27,7 @@ delay1s:
   delay1s_exitloop:
 RET
 
-delay1ms:
+delay1ms:               ;1 ms loop delay
   .equ Rloop, Rtemp1
 
   LDI Rloop, 80
@@ -52,7 +52,7 @@ delay1ms:
   delay1ms_exitloop:
 RET
 
-delay100ms:
+delay100ms:             ;100ms loop delay
   .equ Rloop, Rtemp1
 
   LDI Rloop, 8

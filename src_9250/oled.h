@@ -2,12 +2,13 @@
 #include "avr/io.h"
 #include "registerMap.h"
 
-OLED_init:
+OLED_init: ;initialize OLED 
   CALL I2C_start
 
   LDI RdataOut, OLED_Addr_W
   CALL I2C_write
   
+  ;initiliaze OLED display sequence
   LDI RdataOut, 0x00
   CALL I2C_write
 
@@ -89,7 +90,7 @@ OLED_displayOn:
     LDI RdataOut, 0x00
     CALL I2C_write
 
-    LDI RdataOut, 0xAF
+    LDI RdataOut, 0xAF      ;Command to turn on the OLED display
     CALL I2C_write
   CALL I2C_stop
 
@@ -104,7 +105,7 @@ OLED_displayOff:
     LDI RdataOut, 0x00
     CALL I2C_write
 
-    LDI RdataOut, 0xAE
+    LDI RdataOut, 0xAE      ;Command to turn off the OLED display
     CALL I2C_write
   CALL I2C_stop
 
@@ -154,7 +155,7 @@ OLED_writeByte:
       MOV ROLED_4bit, ROLED_buffer
       ANDI ROLED_4bit, 0xF0
       SWAP ROLED_4bit
-      LDI Rtemp6, 6
+      LDI Rtemp6, 6         ;6 columns
       MUL ROLED_4bit, Rtemp6
       ADD R30, R0
       CLR R0
@@ -180,7 +181,7 @@ OLED_writeByte:
   CALL USART_null
 RET
 
-OLED_writeChar:
+OLED_writeChar:           ;Writing the characters onto the display 
   LDI Rtemp1, 6
   OLED_writeChar_loop:
     LPM RdataOut, Z+
@@ -189,7 +190,7 @@ OLED_writeChar:
   BRNE OLED_writeChar_loop
 RET
 
-OLED_char:
+OLED_char:                ;OLED prequisites criteria for displaying characters
   .byte 0x00, 0x3E, 0x51, 0x49, 0x45, 0x3E // 0
   .byte 0x00, 0x00, 0x42, 0x7F, 0x40, 0x00 // 1
   .byte 0x00, 0x42, 0x61, 0x51, 0x49, 0x46 // 2
