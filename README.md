@@ -1,11 +1,11 @@
 # 🧭 DIGITAL COMPASS
 ```
-This project to be one of the requirements for the Physical Cyber System Practicum class completion in Department of Computer Engineering,  University of Indonesia
+This project to be one of the requirements for the Physical Cyber System Practicum Class completion in Department of Computer Engineering,  University of Indonesia
 ```
 
 ## About the project
 
-The digital compass is made with assembly language in AVR using an MPU-9250 sensor and displaying the coordinate results at the form of tesla units onto an OLED display. This program is designed by Group A3 which consists of : 
+The digital compass is made with assembly language in AVR using an MPU-9250 sensor and displaying the results onto an OLED display. This program is designed by Group A3 which consists of : 
 
 - Zaki Ananda - 2106705474
 - Zulfikar Hadzalic - 2106636224
@@ -30,14 +30,16 @@ In this project, we're trying to make our own digital compass using an MPU-9250 
 - OLED Display
 - Breadboard
 
-From top to bottom, the OLED screen will display these three types of angular rate measurements in the form of tesla units :
+![compassProteusPic](https://github.com/zaki-ananda/DigitalCompass/assets/88538229/32400b30-f8f4-45f6-a523-269906ced6e7)
+
+From top to bottom, the OLED screen will display these three types of angular rate measurements based on gyroscope readings:
 - Yaw : the horizontal rotation on a flat surface when seen the object from above.
 - Pitch : vertical rotation as seen the object from front.
 - Roll : horizontal rotation when seen the object from front.
 
 
 ## Software implementation details
-There are 1 main assembly file 5 header files which containing the function prototypes and libraries needed to make this project.
+There are 1 main assembly file and 5 header files which containing the function prototypes and libraries needed to make this project.
 
 ```
 main.S
@@ -70,16 +72,13 @@ This file is used for USART operations used in the program.
 
 ![compassPic](https://github.com/zaki-ananda/DigitalCompass/assets/88538229/9fe249dd-772b-46f8-a73d-fc0b33752f40)
 
-As seen above, the project works as expected. The OLED could display yaw, pitch, and roll on tesla units and could varies depending on the device's position. 
+As seen from the picture, the project works as expected. The OLED could display yaw, pitch, and roll variables as gyroscope readings and could vary depending on the device's position. 
 
-However, the performance and functionality hasn't fully met our initial purpose as a digital compass. The reason why we haven't been able to do that is to display the current's yaw, pitch, and roll on tesla units and then convert them into compass directions is a more difficult tasks than we expected before as we need more variables such as calibrations and more.   
+However, the performance and functionality hasn't fully met our initial purpose as a digital compass. The reason why we haven't been able to do that is to display the current's yaw, pitch, and roll based on gyroscope readings and then to convert them into compass directions is a more difficult tasks than we expected before as we need more variables to apply into the program such as calibrations and magnetic inclination.   
 
 ---
 ## Conclusion and future work
 
-In conclusion, the project to make a digital compass was successfully completed although it is not 100% as we expected. The digital compass is a useful tool for navigation, and the project involved the use of various electronic components such as an Arduino Uno, MPU-9250 sensor module, and OLED to display the result.
+In conclusion, the project to make a digital compass was successfully completed although it is not completely 100% as we expected. The digital compass is a useful tool for navigation, and the project involved the use of various electronic components such as an Arduino Uno, MPU-9250 sensor module, and OLED to display the result.
 
-Although this project still lacks what we need, there is potential for future improvements and developments in this project. One possible improvement is to add more variables into the program so that the OLED could display a more proper compass reading. Additionally, we could improve how the user interface in the OLED works so that it is more understandable by non-expert people to read the compass direction. 
-
-## Report 
-[Insert Report file here]
+Although this project still lacks from what we initially need and want to achieve, there is potential for future improvements and developments in this project. One possible improvement is to add more variables into the program so that the OLED could display a more proper compass reading. Additionally, we could improve how the user interface in the OLED works so that it is more understandable by non-expert people to read the compass direction. 
