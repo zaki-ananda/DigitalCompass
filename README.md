@@ -14,11 +14,11 @@ The digital compass is made with assembly language in AVR using an MPU-9250 sens
 
 
 ## Introduction to the problem and the solution
-Digital compasses have become increasingly popular in recent years, thanks to the convenience and accuracy they offer over traditional compasses. However, as with any technology, there are potential problems and challenges associated with their use.
+Navigation is an essential part of our daily lives, and a reliable compass is a crucial tool for accurate navigation. Traditional compasses have been used for centuries, but they have limitations such as the need for calibration, sensitivity to nearby magnetic fields, and difficulties in reading the compass accurately in low light conditions.
 
-One of the problems with digital compasses is their reliance on battery power, which can run out at inconvenient times, leaving users without a reliable navigation tool. Another issue is the potential for interference from electronic devices, which can disrupt the compass's accuracy and make it difficult to obtain accurate readings.
+One possible solution to the challenges faced by traditional compasses is to to make digital compasses that combines the accuracy and simplicity of a traditional compass with the digital display and additional features of a digital compass could be an effective solution. The digital compass could have a traditional needle that points to magnetic north, but also include additional digital features such as an electronic display showing distance and location.
 
-Moreover, digital compasses require users to be familiar with their features and settings to use them properly. Many users may not fully understand the capabilities and limitations of their digital compasses, which can lead to inaccurate navigation and potentially dangerous situations.
+The digital compass could also include additional sensors such as a GPS, gyroscope, and accelerometer, which could provide more accurate readings and allow for more precise navigation. Moreover, digital compasses enable users to be more familiar with their features and readings and will be able to undestand it quickly.
 
 
 ## Hardware design and implementation details
